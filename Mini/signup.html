@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>signup</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="heading"><h1>COURSE RECOMMENDER</h1></div>
+        <div class="box">
+            <div class="box2">
+        <form action="" method="post" class="form">
+            <h3 align="center" style="border: none;">Sign Up</h3>
+            <input type="text" name="name" placeholder="NAME">
+            <input type="text" name="Email" placeholder="EMAIL">
+            <input type="text" name="course" placeholder="course">
+            <input type="text" name="intrest" placeholder="intrest">
+            <input type="text" name="college" placeholder="college">
+            <input type="text" name="job" placeholder="job">
+            <input type="text" name="year" placeholder="year">
+            <input type="password" name="password" id="password" placeholder="password">
+            <input type="password" name="password2" id="password2" placeholder="retype password" 
+            onchange="checkpassword()">
+            <input type="submit" name="signup" value="signup" id="signup" class="switch">
+        </form>
+    </div>
+    </div>
+    </body>
+
+</html>
+<script>
+    function checkpassword(){
+        let a=document.getElementById("password").value;
+        let b=document.getElementById("password2").value;
+        if(a!=b){
+            alert("passwords are not same");
+        }
+    }
+</script>

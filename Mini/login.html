@@ -1,0 +1,113 @@
+<!-- <html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="heading">
+        <h1>COURSE RECOMMENDER</h1>
+        </div>
+        <div class="box">
+            <div class="box2">
+        <form action="" method="post" class="form">
+            <input type="text" name="user_id" placeholder="USER NAME">
+            <input type="password" name="password" placeholder="PASSWORD">
+            <input type="submit" name="login" value="log in" class="switch">
+        </form>
+    </div>
+    <div class="box">
+            <a href="signup.html"><button class="switch2">sign up</button></a>
+            <a href="forget.html" class="forget">forget password?</a>
+        </div>
+    </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        .container {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #f2f2f2;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+input {
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: none;
+	background-color: #e6e6e6;
+}
+
+button {
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	background-color: #4CAF50;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+	<div class="container">
+		<h1>Sign Up</h1>
+		<form>
+
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email" required>
+
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" required>
+
+			<label for="confirm-password">Confirm Password</label>
+			<input type="password" id="confirm-password" name="confirm-password" required>
+
+			<button type="submit">Sign Up</button>
+		</form>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
+<script>
+    const form = document.querySelector('form');
+const email = document.querySelector('#email');
+const password = document.querySelector('#password');
+const confirmPassword = document.querySelector('#confirm-password');
+
+form.addEventListener('submit', (event) => {
+	event.preventDefault();
+
+	if (password.value !== confirmPassword.value) {
+		alert('Passwords do not match!');
+		return;
+	}
+
+	console.log(`Email: ${email.value}`);
+	console.log(`Password: ${password.value}`);
+	console.log(`Confirm Password: ${confirmPassword.value}`);
+});
+
+</script>

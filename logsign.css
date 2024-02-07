@@ -1,0 +1,16 @@
+.box{
+    display:grid ;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+
+}
+.switch{
+    border-radius: 20px;
+    background-color:  rgb(167, 145, 25);
+    width: 12em;
+    height: 3em;
+    color: white;
+    border: none;
+    font-size: medium;
+}

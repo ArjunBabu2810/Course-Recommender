@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html
+ 
+lang="en">
+
+<head>
+
+  
+<meta
+ 
+charset="UTF-8">
+
+  
+<meta
+ 
+name="viewport"
+ 
+content="width=device-width, initial-scale=1.0">
+
+  
+<title>Login Form</title>
+
+  
+<link
+ 
+rel="stylesheet"
+ 
+href="style.css">
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  width: 350px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="email"], input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.checkbox input {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.or {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.or span {
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.social-media a {
+  font-size: 20px;
+  color: #4CAF50;
+}
+
+.social-media a:hover {
+  color: #00}
+</style>
+
+</head>
+
+<body>
+
+  
+<div
+ 
+class="container">
+    <h1>Please login to continue</h1>
+    <form action="#">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="johndoe@example.com">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="••••••••">
+      <div class="checkbox">
+        <input type="checkbox" id="remember-me">
+        <label for="remember-me">Remember me</label>
+      </div>
+      <button type="submit">LOGIN</button>
+    </form>
+    <a href="#">Forgot password?</a>
+    <div class="or">
+      <span>or</span>
+    </div>
+    <a href="#">Sign up using</a>
+    <div class="social-media">
+
+      
+<a
+ 
+href="#"><i
+ 
+class="fab fa-facebook-f"></i></a>
+
+      
+<a
+ 
+href="#"><i
+ 
+class="fab fa-twitter"></i></a>
+
+      
+<a
+ 
+href="#"><i
+ 
+class="fab fa-google-plus-g"></i></a>
+
+    
+</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

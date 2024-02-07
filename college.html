@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title>Course Recommender</title>
+        <link rel="stylesheet" href="./College/Style.css">
+        <script src="changediv.js"></script>
+        <style>
+    .box {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f8f8f8;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .box2 {
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    h2 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .items {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .inputbox {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .sbutton {
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .sbutton:hover {
+        background-color: #2980b9;
+    }
+</style>
+
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="heading">Course Recommender</h1>
+            <link rel="stylesheet" href="tables.css".css">
+            <nav class="nav">
+                <ul class="ulist">
+                    <li class="list"><a class="link" href="./Index/index.php" >Home</a></li>
+                    <li class="list"><a class="link" href="./Adminmanage.php" >Admin</a></li>
+                    <li class="list"><a class="link" href="./coursemanage.php" >Course</a></li>
+                    <li class="list"><a class="link" href="./collegemanager.php" >College</a></li>
+                    <li class="list"><a class="link" href="./CCmanage.php" >College Course</a></li>
+                    <li class="list"><a class="link" href="./intrestmanage.php" >Intrest</a></li>
+                    <li class="list"><a class="link" href="./jobmanager.php" >Job</a></li>
+                    <li class="list"><a class="link" href="./studentmanage.php" >Students</a></li>
+                    <li class="list"><a class="link" href="./report.php" >Reports</a></li>
+                </ul>
+            </nav>
+    </header>
+    <nav class="nav2">
+        <form action="logout.php" method="post">
+            <input type="submit" name=logout value="lout" class="logout">
+        </form>
+    </nav>
+    <main class="mainbox" id="content">
+    <div class="box">
+           <form action="college.php" method="post" class="form">
+        <div class="box2">
+                <h2>Enter College Details</h2>
+                <span class="items">Name<input class="inputbox" type="text" name="name" id="name"></span>
+                <span class="items">Email<input class="inputbox" type="text" name="email" id="email"></span>
+                <span class="items">Phone<input class="inputbox" type="number" name="phone" id="phone" onchange="checkphone()"></span>
+                <span class="items">Website link<input class="inputbox" type="text" name="website" id="website"></span>
+                <span class="items">Address<input class="inputbox" type="text" name="address" id="address"></span>
+                <span class="items">Place<input class="inputbox" type="text" name="place" id="place"></span>
+                <span class="items">Est Date<input class="inputbox" type="date" name="date" id="date"></span>
+                <span class="items">Password<input class="inputbox" type="password" name="password" id="password"></span>
+                <span class="items">Retype Password<input class="inputbox" type="password" name="password2" id="password2"
+                    onchange="checkpassword()"></span>
+                <input class="sbutton" type="submit" name="signup" value="signup">
+            </form>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <p>&copy;Course Recommender System. All rights are reserved</p>
+</footer>
+</body>
+</html>
+<script>
+    function checkphone() {
+        let c=document.getElementById("phone").value;
+        if(c.length<9||c.length>10){
+            alert('Phone number should be 10 digits');
+        }
+    }
+    function checkpassword(){
+        let a=document.getElementById("password").value;
+        let b=document.getElementById("password2").value;
+        
+        if(a!=b){
+            alert("passwords are not same");
+        }
+    }
+</script>

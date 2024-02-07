@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="../common.css">
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+        <header class="header">
+            <h1>Course Recommender</h1>
+        </header>
+        <span class="mainspan">
+        <div class="box">
+            <h1 class="log" >Admin Login</h1>
+            <form action="login.php" method="post" class="form">
+            <div class="box2" id="box2">
+            
+                <span> <input type="text" name="email" placeholder="Email" class="input"></span>
+                <span><input type="password" name="password" placeholder="Password" class="input"></span>
+                <span><input type="submit" name="login" value="log in" class="switch"></span>
+                <a href="forgot.html" class="forget" onclick="">forgot password?</a>
+            </div>
+        
+        </span>
+        </form>
+        </div>
+        
+    </body>
+</html>
+<script>
+    function forgot() {
+        var div = document.getElementById("box2");
+        div.innerHTML = '<iframe src="forgot.html" frameborder="0" style="width=100%; height=100%;"></iframe >';
+    }
+</script>

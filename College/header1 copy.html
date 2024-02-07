@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Course Recommender</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="tables.css">
+        <script src="changediv.js"></script>
+        <link rel="stylesheet" href="../bootstrap.css">
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <script src="changediv.js"></script>
+<script src="changediv.js"></script>
+<script src="jspdf.umd.min.js"></script>
+        <script src="jspdf.plugin.autotable.js"></script>
+
+        <!-- Your script with the generatePDF function -->
+        <script>
+            window.jsPDF = window.jspdf.jsPDF;
+            function generatePDF() {
+                // Initialize jsPDF
+                const doc = new jsPDF();
+
+                // Get the table element
+                const table = document.getElementById('coursetable');
+
+                doc.autoTable({ html: table });
+
+                doc.save('table.pdf');
+            }
+        </script>
+</style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="heading">Course Recommender</h1>
+        <nav class="nav">
+            <ul class="ulist">
+                <li class="list"><a class="link" href="index1.php" >Home</a></li>
+                <li class="list"><a class="link" href="courseview.php" >Course</a></li>
+                <li class="list"><a class="link" href="college.php" >College</a></li>
+                <li class="list"><a class="link" href="CCmanage.php" >College Course</a></li>
+                <li class="list"><a class="link" href="report.php" >Interested</a></li>
+            </ul>
+        </nav>
+</header>
+<nav class="nav2">
+    <form action="logout.php" method="post">
+        <input type="submit" name=logout value="lout" class="logout">
+    </form>
+</nav>
+<main class="mainbox" id="content">

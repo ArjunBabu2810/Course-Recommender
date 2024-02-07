@@ -1,0 +1,28 @@
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.box2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2cm;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgb(146, 146, 146);
+    border-radius: 15px;
+    padding: 7mm;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.form{
+    display: flex;
+    justify-content: space-between;
+}
+.items{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 3mm;
+}

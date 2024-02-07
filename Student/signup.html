@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" type="text/css" href="sign.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">Course Recommender</h1>
+    </header>
+    <div class="container">
+        <h1 class="form-title">Sign Up</h1>
+        <form class="signup-form" action="signup.php" method="post">
+
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+
+            <label for="phone" class="form-label">Phone(10 digits)</label>
+            <input type="tel" id="phone" name="phone" class="form-input" onchange="checkphone()">
+
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" name="password" class="form-input" required>
+
+            <label for="confirm-password" class="form-label">Confirm Password(Should be same as above)</label>
+            <input type="password" id="confirm-password" name="confirm-password" class="form-input" onchange="che" required>
+
+            <input type="submit" class="form-button" value="Sign Up" name="signup" disabled>
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        const form = document.querySelector('form');
+        const email = document.querySelector('#email');
+        const phone = document.querySelector('#phone');
+        const password = document.querySelector('#password');
+        const confirmPassword = document.querySelector('#confirm-password');
+        const submitButton = document.querySelector('.form-button');
+        function checkphone(){
+            if (phone.value.length !== 10) {
+                alert('Phone number should be 10 digits!');
+            }
+        }
+        function checkpassword() {
+            if (password.value !== confirmPassword.value) {
+                alert('Passwords do not match!');
+            }
+        }
+        form.addEventListener('submit', (event) => {
+            if (password.value !== confirmPassword.value) {
+                alert('Passwords do not match!');
+            } else if (phone.value.length !== 10) {
+                alert('Phone number should be 10 digits!');
+            } else {
+                // If both conditions are met, submit the form
+                return true;
+            }
+            
+            event.preventDefault(); // prevent the form from submitting if conditions are not met
+        });
+
+        // Enable/disable submit button based on conditions
+        form.addEventListener('input', () => {
+            if (password.value !== confirmPassword.value || phone.value.length !== 10) {
+                submitButton.disabled = true;
+            } else {
+                submitButton.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>

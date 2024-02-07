@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    /* background-image: url('../Images/pexels-jess-bailey-designs-762686.jpg'); */
+    /* background-color: #f4f4f4; */
+    background: rgb(1,118,195);
+    background: radial-gradient(circle, rgba(1,118,195,1) 0%, rgba(199,238,255,1) 77%, rgba(250,250,250,1) 100%);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #0176c3;
+    color: #fff;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #0176c3;
+    color: white;
+}
+
+#table {
+    display: none;
+}
+
+button {
+    background-color: #0176c3;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+.search {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}

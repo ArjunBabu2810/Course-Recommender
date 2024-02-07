@@ -1,0 +1,22 @@
+.header{
+    background-color: #0176C3;
+    height: 3.5em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: .5cm;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:larger;
+    font-weight:bolder;
+    box-shadow:  1px 1px 2px white;
+    text-shadow:1px 1px 2px white;
+    padding-right: .5cm;
+    margin: 2mm;
+}
+body{
+    background-color: #ffffff;
+    padding: 0;
+    margin: 0;
+}

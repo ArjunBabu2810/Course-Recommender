@@ -1,0 +1,52 @@
+body{
+    background-image: linear-gradient(to bottom right, #0C356A, #279EFF);
+    height: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.form{
+    display: flex; 
+    flex-direction: column;
+    color: white;
+    
+
+}
+.form *{
+    margin:5px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid;
+    color: white;
+    width: 25em;
+}
+.switch{
+    border: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: #241468;
+    border-color: rgb(255, 255, 255);    
+    color: white;
+}
+.switch2{
+    border: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: #241468;
+    border-color: rgb(255, 255, 255);    
+    color: white;
+    width: 100px;
+}
+.switch2:hover{
+    transform: scale(1.1);
+}
+.switch:hover{
+    transform: scale(1.1);
+}
+.forget{
+    margin-top: 10px;
+    font-size: .9em;
+    transition: 3;
+}
+.forget:hover{
+    
+    transform: scale(1.1);
+}

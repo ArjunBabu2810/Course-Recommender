@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- <link rel="stylesheet" href="../common.css"> -->
+    <link rel="stylesheet" href="login1.css">
+    <link rel="stylesheet" href="login.css">
+    <style>
+        
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Course Recommender</h1>
+    </header>
+    <div class="main-container">
+        <div class="login-box">
+            <h1 class="login-heading">College Login</h1>
+            <form action="login.php" method="post" class="login-form">
+                <input type="text" name="email" placeholder="Email" class="input-field" required>
+                <input type="password" name="password" placeholder="Password" class="input-field" required>
+                <input type="submit" name="login" value="Log In" class="login-button">
+            </form>
+            <a href="#" class="forgot-password-link" onclick="showForgotPassword()" >Forgot password?</a>
+            <div id="forgotPasswordFrame" class="forgot-password-frame"></div>
+            <a href="signup.html"class="forgot-password-link">Don't have an account?</a>
+        </div>
+    </div>
+
+    <!-- <script src="login.js"></script> -->
+</body>
+</html>
+<script>
+    function showForgotPassword() {
+    var forgotPasswordFrame = document.getElementById("forgotPasswordFrame");
+    if (forgotPasswordFrame.style.display === "none" || forgotPasswordFrame.style.display === "") {
+        forgotPasswordFrame.innerHTML = '<div class="forgot-password-content"> \
+            <h2 class="login-heading" >Reset Password</h2>\
+            <form action="forgot.php" method="post" class="form">\
+            <div class="box2" id="box2">\
+                <span> <input type="text" name="email" placeholder="Email" class="input-field"></span>\
+                <span><input type="password" name="password" placeholder="Password" class="input-field" id="password"></span> \
+                <span><input type="password" name="password" placeholder="Password" class="input-field" id="password2"></span> \
+                <span><input type="submit" name="reset" value="reset" class="login-button"></span>\
+                </form>\
+            </div> \
+            <a href="login.html"><button class="login-button">Back</button></a?> \
+                                       </div>';
+        forgotPasswordFrame.style.display = "block";
+    } else {
+        forgotPasswordFrame.innerHTML = "";
+        forgotPasswordFrame.style.display = "none";
+    }
+}
+
+
+</script>

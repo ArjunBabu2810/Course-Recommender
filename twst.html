@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table to PDF</title>
+
+    <!-- Add the html2pdf library from a CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.0/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+    <h1>Table to PDF</h1>
+
+    <!-- Table to be converted to PDF -->
+    <table id="myTable" border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>25</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>30</td>
+                <td>Los Angeles</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+
+    <!-- Button to generate PDF -->
+    <button onclick="generatePDF()">Generate PDF</button>
+
+    <!-- Script for PDF generation -->
+    <script>
+        // Function to generate PDF from the table
+        function generatePDF() {
+            const element = document.getElementById("myTable");
+
+            // Ensure the element is found before attempting to generate the PDF
+            if (element) {
+                html2pdf(element);
+            } else {
+                console.error("Element with id 'myTable' not found.");
+            }
+        }
+    </script>
+
+</body>
+</html>

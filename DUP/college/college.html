@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Entry</title>
+    <!-- Use the latest Bootstrap version (5.2.3) -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS via CDN -->
+
+<!-- Bootstrap JavaScript (including Popper.js) via CDN -->
+
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Course Recommender</h1>
+        <h2 class="text-center mb-4">Enter College Details</h2>
+        <form action="college.php" method="post" class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" name="name" id="name" class="form-control" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter your name.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" name="email" id="email" class="form-control" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter a valid email address.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="password" class="form-label">Password:</label>
+                <input type="password" name="password" id="password" class="form-control" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter a password.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="password2" class="form-label">Retype Password:</label>
+                <input type="password" name="password2" id="password2" class="form-control" onchange="checkpassword()" required>
+                <div class="valid-feedback">
+                    Passwords match!
+                </div>
+                <div class="invalid-feedback">
+                    Passwords do not match.
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" name="signup" class="btn btn-primary">Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Use the latest Bootstrap version (5.2.3) -->
+    <script src="bootstrap.bundle.js" integrity="sha384-kenUIA867+8vWM2nD+h6T9tw"></script>
+</body>
+
+</html>

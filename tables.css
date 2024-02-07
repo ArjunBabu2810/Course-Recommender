@@ -1,0 +1,67 @@
+input{
+    background: transparent;
+    border: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Merge cell borders */
+}
+
+th, td {
+    border: 1px solid ;
+    padding: 1em;
+    text-align: left;
+}
+th{
+    background-color: #0176c3;
+    color: #fafafa;
+}
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
+tr:nth-child(odd) {
+    background-color: #c7eeff;
+}
+
+td:hover {
+    background-color: #ddd;
+}
+.switcht{
+    background:white;
+}
+.update{
+    
+    padding: .5em;
+    background-color: #0c4bcc;
+    color: #fafafa;
+    border-radius: .5em;
+}
+.delete{
+    
+    padding: .5em;
+    background-color: #ff5771;
+    color: #fafafa;
+    border-radius: .5em;
+}
+.update:hover{
+    color: black;
+}
+.delete:hover{
+    background-color: red;
+    color: black;
+}
+.button{
+    padding: .5em;
+    background-color: #57ff76;
+    border-radius: 1em;
+    border: solid .5em #fafafa;
+}
+.button:hover{
+    background-color: #0ff93a;
+    color: #fafafa;
+}
+.option{
+    border: none;
+    background:transparent;
+}

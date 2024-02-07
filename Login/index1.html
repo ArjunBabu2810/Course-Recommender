@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Recommender</title>
+    <!-- Use Bootstrap CSS from CDN -->
+    <link href="." rel="stylesheet" integrity="sha384-CrasjWjW6q8fFFRfsYYW3fuhzPPWZkKMPb5Q2CAnzW7tsDQzV6PqKr45zB4vZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../College/Style1.css">
+    <!-- Optional: Include jQuery for simplified syntax -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="changediv.js"></script>
+    <script>
+        // Use jQuery for simplified syntax
+        $(document).ready(function () {
+            $('.link').click(function () {
+                $('.link').removeClass('active-link');
+                $(this).addClass('active-link');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header class="header bg-primary text-white">
+        <div class="container">
+            <h1 class="heading">Course Recommender</h1>
+            <nav class="nav">
+                <ul class="ulist navbar-nav">
+                    <li class="list nav-item"><a class="link nav-link active-link" href="#" onclick="Home()">Home</a></li>
+                    <li class="list nav-item"><a class="link nav-link" href="#" onclick="contentCourse()">Course</a></li>
+                    <li class="list nav-item"><a class="link nav-link" href="#" onclick="contentCollege()">College</a></li>
+                    <li class="list nav-item"><a class="link nav-link" href="#" onclick="contentCollegeCourse()">College Course</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <nav class="nav2 bg-light">
+        <div class="container">
+            <form action="logout.php" method="post" onsubmit="return confirm('Are you sure you want to log out?');">
+                <input type="submit" name="logout" value="Logout" class="logout btn btn-danger">
+            </form>
+        </div>
+    </nav>
+    <main class="mainbox container mt-4">
+        <?php
+        session_start();
+        if (!isset($_SESSION['UserName'])) {
+            // Redirect to login page or handle unauthorized access
+            header("Location: login.php");
+            exit();
+        }
+
+        $name = $_SESSION['UserName'];
+        echo "<h1 class='display-4'>Welcome $name</h1><p class='lead'>Make this page more useful</p>";
+        ?>
+    </main>
+    <footer class="footer bg-dark text-white">
+        <div class="container">
+            <p>&copy; Course Recommender System. All rights are reserved</p>
+        </div>
+    </footer>
+
+    <!-- Use Bootstrap JavaScript from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenUIA867+8vWM2nD+h6T9tw"></script>
+</body>
+
+</html>
